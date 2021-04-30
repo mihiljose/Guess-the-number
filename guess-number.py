@@ -19,11 +19,19 @@ while attempts!=0:
     if guess>random_no:
         print("Too high!\nGuess Again😁")
         attempts-=1
-        print(f"You have {attempts} attempts remaining")
+        if attempts ==0:
+          print("You have run out of guesses! game Over!")
+        else:
+          print(f"You have {attempts} attempts remaining")
+
     elif guess<random_no:
         print("Too Low!\nGuess Again😁")
         attempts-=1
-        print(f"You have {attempts} attempts remaining")
+        if attempts ==0:
+          print("You have run out of guesses! game Over!")
+        else:
+          print(f"You have {attempts} attempts remaining")
+
     else:
         print("You guessed it right!😃")
         attempts = 0
