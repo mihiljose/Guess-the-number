@@ -10,15 +10,20 @@ difficulty_level = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
 if difficulty_level.lower() == "easy":
     attempts = 10
+    print("You have 10 Attempts")
 else:
     attempts = 5
-    
+    print("You have 5 Attempts")
 while attempts!=0:
     guess = int(input("Make a guess: "))
     if guess>random_no:
-        print("Too high!\nGuess Again")
+        print("Too high!\nGuess Again😁")
+        attempts-=1
+        print(f"You have {attempts} attempts remaining")
     elif guess<random_no:
-        print("Too Low!\nGuess Again")
+        print("Too Low!\nGuess Again😁")
+        attempts-=1
+        print(f"You have {attempts} attempts remaining")
     else:
-        print("You guessed it right!")
+        print("You guessed it right!😃")
         attempts = 0
